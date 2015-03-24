@@ -9,5 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface BSBusStop : NSObject
+@property NSDictionary *dictionary;
+@property NSString *ID;
+@property NSString *ctaStopName;
+@property NSString *routes;
+@property NSString *longitude;
+@property NSString *latitude;
+@property NSString *direction;
+
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 
 @end

@@ -7,7 +7,35 @@
 //
 
 #import <Foundation/Foundation.h>
+@protocol BSDataDelegate <NSObject>
 
-@interface BSDataManager : NSObject
+@optional
+- (void)gotBusData:(id)array;
 
 @end
+@interface BSDataManager : NSObject
+
+
+//@property NSString *callType;
+//@property NSString *searchReplacement;
+//@property NSString *userKey;
+
+@property NSString *busUrl;
+//@property NSString *commentUrl;
+@property NSDictionary *dictionary;
+@property NSArray *array;
+
+
+@property (nonatomic, assign) id <BSDataDelegate> delegate;
+
+
+
+- (void)getBusData;
+//- (void)getDictionaryData:(NSString *)searchReplacement;
+//- (instancetype)initWithType:(NSString *)callType WithSearch:(NSString *)searchReplacement;
+
+
+
+@end
+
+

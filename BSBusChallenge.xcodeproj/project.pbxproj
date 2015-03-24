@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		6B0813531AC1E56500B6CC53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813521AC1E56500B6CC53 /* main.m */; };
 		6B0813561AC1E56500B6CC53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813551AC1E56500B6CC53 /* AppDelegate.m */; };
-		6B0813591AC1E56500B6CC53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813581AC1E56500B6CC53 /* ViewController.m */; };
 		6B08135C1AC1E56500B6CC53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B08135A1AC1E56500B6CC53 /* Main.storyboard */; };
 		6B08135E1AC1E56500B6CC53 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B08135D1AC1E56500B6CC53 /* Images.xcassets */; };
 		6B0813611AC1E56500B6CC53 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B08135F1AC1E56500B6CC53 /* LaunchScreen.xib */; };
 		6B08136D1AC1E56500B6CC53 /* BSBusChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B08136C1AC1E56500B6CC53 /* BSBusChallengeTests.m */; };
+		6B0813811AC1E67B00B6CC53 /* BSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813801AC1E67B00B6CC53 /* BSHomeViewController.m */; };
+		6B0813841AC1E6B400B6CC53 /* BSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813831AC1E6B400B6CC53 /* BSDataManager.m */; };
+		6B0813871AC1ECBD00B6CC53 /* BSBusStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813861AC1ECBD00B6CC53 /* BSBusStop.m */; };
+		6B08138A1AC200C900B6CC53 /* BSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813891AC200C900B6CC53 /* BSMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +35,20 @@
 		6B0813521AC1E56500B6CC53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B0813541AC1E56500B6CC53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B0813551AC1E56500B6CC53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6B0813571AC1E56500B6CC53 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6B0813581AC1E56500B6CC53 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6B08135B1AC1E56500B6CC53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B08135D1AC1E56500B6CC53 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6B0813601AC1E56500B6CC53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6B0813661AC1E56500B6CC53 /* BSBusChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSBusChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B08136B1AC1E56500B6CC53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B08136C1AC1E56500B6CC53 /* BSBusChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSBusChallengeTests.m; sourceTree = "<group>"; };
+		6B08137F1AC1E67B00B6CC53 /* BSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSHomeViewController.h; path = BSBusChallenge/Controller/BSHomeViewController.h; sourceTree = "<group>"; };
+		6B0813801AC1E67B00B6CC53 /* BSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSHomeViewController.m; path = BSBusChallenge/Controller/BSHomeViewController.m; sourceTree = "<group>"; };
+		6B0813821AC1E6B400B6CC53 /* BSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSDataManager.h; path = BSBusChallenge/Model/BSDataManager.h; sourceTree = "<group>"; };
+		6B0813831AC1E6B400B6CC53 /* BSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSDataManager.m; path = BSBusChallenge/Model/BSDataManager.m; sourceTree = "<group>"; };
+		6B0813851AC1ECBD00B6CC53 /* BSBusStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSBusStop.h; path = BSBusChallenge/Model/BSBusStop.h; sourceTree = "<group>"; };
+		6B0813861AC1ECBD00B6CC53 /* BSBusStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSBusStop.m; path = BSBusChallenge/Model/BSBusStop.m; sourceTree = "<group>"; };
+		6B0813881AC200C900B6CC53 /* BSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSMapViewController.h; path = BSBusChallenge/Controller/BSMapViewController.h; sourceTree = "<group>"; };
+		6B0813891AC200C900B6CC53 /* BSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSMapViewController.m; path = BSBusChallenge/Controller/BSMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,9 @@
 		6B0813441AC1E56500B6CC53 = {
 			isa = PBXGroup;
 			children = (
+				6B0813781AC1E58A00B6CC53 /* Model */,
+				6B0813771AC1E58700B6CC53 /* View */,
+				6B0813761AC1E58500B6CC53 /* Controller */,
 				6B08134F1AC1E56500B6CC53 /* BSBusChallenge */,
 				6B0813691AC1E56500B6CC53 /* BSBusChallengeTests */,
 				6B08134E1AC1E56500B6CC53 /* Products */,
@@ -83,11 +95,7 @@
 			children = (
 				6B0813541AC1E56500B6CC53 /* AppDelegate.h */,
 				6B0813551AC1E56500B6CC53 /* AppDelegate.m */,
-				6B0813571AC1E56500B6CC53 /* ViewController.h */,
-				6B0813581AC1E56500B6CC53 /* ViewController.m */,
-				6B08135A1AC1E56500B6CC53 /* Main.storyboard */,
 				6B08135D1AC1E56500B6CC53 /* Images.xcassets */,
-				6B08135F1AC1E56500B6CC53 /* LaunchScreen.xib */,
 				6B0813501AC1E56500B6CC53 /* Supporting Files */,
 			);
 			path = BSBusChallenge;
@@ -117,6 +125,37 @@
 				6B08136B1AC1E56500B6CC53 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B0813761AC1E58500B6CC53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6B08137F1AC1E67B00B6CC53 /* BSHomeViewController.h */,
+				6B0813801AC1E67B00B6CC53 /* BSHomeViewController.m */,
+				6B0813881AC200C900B6CC53 /* BSMapViewController.h */,
+				6B0813891AC200C900B6CC53 /* BSMapViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6B0813771AC1E58700B6CC53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B08135A1AC1E56500B6CC53 /* Main.storyboard */,
+				6B08135F1AC1E56500B6CC53 /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6B0813781AC1E58A00B6CC53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B0813821AC1E6B400B6CC53 /* BSDataManager.h */,
+				6B0813831AC1E6B400B6CC53 /* BSDataManager.m */,
+				6B0813851AC1ECBD00B6CC53 /* BSBusStop.h */,
+				6B0813861AC1ECBD00B6CC53 /* BSBusStop.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +258,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B0813591AC1E56500B6CC53 /* ViewController.m in Sources */,
+				6B0813871AC1ECBD00B6CC53 /* BSBusStop.m in Sources */,
+				6B0813841AC1E6B400B6CC53 /* BSDataManager.m in Sources */,
 				6B0813561AC1E56500B6CC53 /* AppDelegate.m in Sources */,
+				6B0813811AC1E67B00B6CC53 /* BSHomeViewController.m in Sources */,
+				6B08138A1AC200C900B6CC53 /* BSMapViewController.m in Sources */,
 				6B0813531AC1E56500B6CC53 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +292,7 @@
 				6B08135B1AC1E56500B6CC53 /* Base */,
 			);
 			name = Main.storyboard;
+			path = BSBusChallenge;
 			sourceTree = "<group>";
 		};
 		6B08135F1AC1E56500B6CC53 /* LaunchScreen.xib */ = {
@@ -258,6 +301,7 @@
 				6B0813601AC1E56500B6CC53 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = BSBusChallenge;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

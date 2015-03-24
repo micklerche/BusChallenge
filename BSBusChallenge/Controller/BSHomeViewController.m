@@ -7,16 +7,28 @@
 //
 
 #import "BSHomeViewController.h"
+#import "BSDataManager.h"
+#import "BSBusStop.h"
+#import "BSMapViewController.h"
 
-@interface BSHomeViewController ()
 
+@interface BSHomeViewController () <BSDataDelegate>
+@property (strong, nonatomic) IBOutlet UITableView *busTableView;
+@property NSArray *bsBusStopArray;
 @end
 
 @implementation BSHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.bsBusStopArray = [NSArray new];
+
+    BSDataManager *dataManager = [BSDataManager new];
+    dataManager.delegate = self;
+    [dataManager getBusData];
+
+
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +36,75 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    BSMapViewController *mvc = [segue destinationViewController];
+    mvc.bsBusStops = self.bsBusStopArray;
+
+
 }
-*/
+
+
+#pragma mark - "BSData Delegate"
+
+- (void)gotBusData:(id)array {
+    NSLog(@"Delegate Data Received");
+
+    self.bsBusStopArray = array;
+    NSLog(@"Delegate item count: %li", (long)self.bsBusStopArray.count);
+
+    [self.busTableView reloadData];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.bsBusStopArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"BusCell"];
+
+    BSBusStop *bsBusStop = [self.bsBusStopArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = bsBusStop.ctaStopName;
+
+    return cell;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
