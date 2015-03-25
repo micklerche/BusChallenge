@@ -17,6 +17,9 @@
 		6B0813841AC1E6B400B6CC53 /* BSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813831AC1E6B400B6CC53 /* BSDataManager.m */; };
 		6B0813871AC1ECBD00B6CC53 /* BSBusStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813861AC1ECBD00B6CC53 /* BSBusStop.m */; };
 		6B08138A1AC200C900B6CC53 /* BSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813891AC200C900B6CC53 /* BSMapViewController.m */; };
+		6B08138C1AC2056900B6CC53 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B08138B1AC2056900B6CC53 /* MapKit.framework */; };
+		6B08138F1AC212D700B6CC53 /* BSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B08138E1AC212D700B6CC53 /* BSDetailViewController.m */; };
+		6B0813921AC21C4600B6CC53 /* BSBusStopPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813911AC21C4600B6CC53 /* BSBusStopPointAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,11 @@
 		6B0813861AC1ECBD00B6CC53 /* BSBusStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSBusStop.m; path = BSBusChallenge/Model/BSBusStop.m; sourceTree = "<group>"; };
 		6B0813881AC200C900B6CC53 /* BSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSMapViewController.h; path = BSBusChallenge/Controller/BSMapViewController.h; sourceTree = "<group>"; };
 		6B0813891AC200C900B6CC53 /* BSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSMapViewController.m; path = BSBusChallenge/Controller/BSMapViewController.m; sourceTree = "<group>"; };
+		6B08138B1AC2056900B6CC53 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6B08138D1AC212D700B6CC53 /* BSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSDetailViewController.h; sourceTree = "<group>"; };
+		6B08138E1AC212D700B6CC53 /* BSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSDetailViewController.m; sourceTree = "<group>"; };
+		6B0813901AC21C4600B6CC53 /* BSBusStopPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSBusStopPointAnnotation.h; path = BSBusChallenge/Model/BSBusStopPointAnnotation.h; sourceTree = "<group>"; };
+		6B0813911AC21C4600B6CC53 /* BSBusStopPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSBusStopPointAnnotation.m; path = BSBusChallenge/Model/BSBusStopPointAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B08138C1AC2056900B6CC53 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +113,7 @@
 		6B0813501AC1E56500B6CC53 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B08138B1AC2056900B6CC53 /* MapKit.framework */,
 				6B0813511AC1E56500B6CC53 /* Info.plist */,
 				6B0813521AC1E56500B6CC53 /* main.m */,
 			);
@@ -134,6 +144,8 @@
 				6B0813801AC1E67B00B6CC53 /* BSHomeViewController.m */,
 				6B0813881AC200C900B6CC53 /* BSMapViewController.h */,
 				6B0813891AC200C900B6CC53 /* BSMapViewController.m */,
+				6B08138D1AC212D700B6CC53 /* BSDetailViewController.h */,
+				6B08138E1AC212D700B6CC53 /* BSDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -154,6 +166,8 @@
 				6B0813831AC1E6B400B6CC53 /* BSDataManager.m */,
 				6B0813851AC1ECBD00B6CC53 /* BSBusStop.h */,
 				6B0813861AC1ECBD00B6CC53 /* BSBusStop.m */,
+				6B0813901AC21C4600B6CC53 /* BSBusStopPointAnnotation.h */,
+				6B0813911AC21C4600B6CC53 /* BSBusStopPointAnnotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -258,12 +272,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B08138F1AC212D700B6CC53 /* BSDetailViewController.m in Sources */,
 				6B0813871AC1ECBD00B6CC53 /* BSBusStop.m in Sources */,
 				6B0813841AC1E6B400B6CC53 /* BSDataManager.m in Sources */,
 				6B0813561AC1E56500B6CC53 /* AppDelegate.m in Sources */,
 				6B0813811AC1E67B00B6CC53 /* BSHomeViewController.m in Sources */,
 				6B08138A1AC200C900B6CC53 /* BSMapViewController.m in Sources */,
 				6B0813531AC1E56500B6CC53 /* main.m in Sources */,
+				6B0813921AC21C4600B6CC53 /* BSBusStopPointAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

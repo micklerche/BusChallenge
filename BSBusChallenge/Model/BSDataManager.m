@@ -29,10 +29,12 @@
 
                                NSLog(@"Data Received");
 
+                               int arrayIndex = 0;
                                for (NSDictionary *busStop in self.array) {
-                                   BSBusStop *bsBusStop = [[BSBusStop alloc]initWithDictionary:busStop];
+                                   BSBusStop *bsBusStop = [[BSBusStop alloc]initWithDictionary:busStop arrayIndex:arrayIndex];
                                    [bsBusStops addObject:bsBusStop];
-                                   NSLog(@"%@", bsBusStop.ctaStopName);
+                                   arrayIndex++;
+                                   NSLog(@"%@ ArrayIndex: %i", bsBusStop.ctaStopName, bsBusStop.arrayIndex);
                                }
 
 

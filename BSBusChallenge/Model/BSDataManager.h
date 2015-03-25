@@ -15,13 +15,7 @@
 @end
 @interface BSDataManager : NSObject
 
-
-//@property NSString *callType;
-//@property NSString *searchReplacement;
-//@property NSString *userKey;
-
 @property NSString *busUrl;
-//@property NSString *commentUrl;
 @property NSDictionary *dictionary;
 @property NSArray *array;
 
@@ -31,8 +25,6 @@
 
 
 - (void)getBusData;
-//- (void)getDictionaryData:(NSString *)searchReplacement;
-//- (instancetype)initWithType:(NSString *)callType WithSearch:(NSString *)searchReplacement;
 
 
 

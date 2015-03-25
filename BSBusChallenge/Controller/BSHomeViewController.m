@@ -31,11 +31,6 @@
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 #pragma mark - Navigation
 
@@ -50,13 +45,21 @@
 #pragma mark - "BSData Delegate"
 
 - (void)gotBusData:(id)array {
-    NSLog(@"Delegate Data Received");
+    //NSLog(@"Delegate Data Received");
 
     self.bsBusStopArray = array;
-    NSLog(@"Delegate item count: %li", (long)self.bsBusStopArray.count);
+    //NSLog(@"Delegate item count: %li", (long)self.bsBusStopArray.count);
 
     [self.busTableView reloadData];
 }
+
+
+
+
+
+
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.bsBusStopArray.count;
@@ -70,14 +73,6 @@
 
     return cell;
 }
-
-
-
-
-
-
-
-
 
 
 

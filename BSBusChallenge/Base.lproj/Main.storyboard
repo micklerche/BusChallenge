@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="1222.5" y="377"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="TB0-SP-2qy">
             <objects>
-                <viewController id="Og5-M3-oNz" sceneMemberID="viewController">
+                <viewController id="Og5-M3-oNz" customClass="BSMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3YC-Cv-vV6"/>
                         <viewControllerLayoutGuide type="bottom" id="NOh-nt-WaK"/>
@@ -93,6 +93,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Mr-Tb-gSq">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Og5-M3-oNz" id="HuG-LX-xDP"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,10 +128,80 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="busStopMapView" destination="7Mr-Tb-gSq" id="aKI-JN-ZQh"/>
+                        <segue destination="InF-EG-afh" kind="show" identifier="DetailSegue" id="Qk5-wz-pl5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbA-tR-623" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1863" y="377"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Ae8-9h-EQ4">
+            <objects>
+                <viewController storyboardIdentifier="BSDetailViewController" id="InF-EG-afh" customClass="BSDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yyn-Nl-mOJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="udr-v3-Gd0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Fj-pv-OSR">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="izP-ce-gjs">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="uRe-b4-L2f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uRe-b4-L2f"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="uRe-b4-L2f"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="izP-ce-gjs" firstAttribute="leading" secondItem="5Fj-pv-OSR" secondAttribute="leadingMargin" constant="-12" id="Nih-1k-mNy"/>
+                            <constraint firstItem="izP-ce-gjs" firstAttribute="top" secondItem="yyn-Nl-mOJ" secondAttribute="bottom" constant="22" id="bcr-e8-wYV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="izP-ce-gjs" secondAttribute="trailing" constant="-13" id="hqb-am-u0A"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="izP-ce-gjs"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Nih-1k-mNy"/>
+                                <exclude reference="bcr-e8-wYV"/>
+                                <exclude reference="hqb-am-u0A"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="izP-ce-gjs"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Nih-1k-mNy"/>
+                                <include reference="bcr-e8-wYV"/>
+                                <include reference="hqb-am-u0A"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="bsAddress" destination="izP-ce-gjs" id="L96-W8-5jh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibv-YQ-rvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2530.5" y="377"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j35-5u-KqT">

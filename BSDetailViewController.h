@@ -1,5 +1,5 @@
 //
-//  BSMapViewController.h
+//  BSDetailViewController.h
 //  BSBusChallenge
 //
 //  Created by Mick Lerche on 3/24/15.
@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
+#import "BSBusStop.h"
 
-@interface BSMapViewController : UIViewController
-@property NSArray *bsBusStops;
-
+@interface BSDetailViewController : UIViewController
+@property BSBusStop *bsBusStop;
 
 @end

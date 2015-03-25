@@ -10,7 +10,7 @@
 
 @implementation BSBusStop
 
--(instancetype)initWithDictionary:(NSDictionary *)dictionary {
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary arrayIndex:(int)arrayIndex {
     self = [super init];
     if (self) {
         self.dictionary = dictionary;
@@ -19,9 +19,18 @@
         self.latitude = [self.dictionary objectForKey:@"latitude"];
         self.direction = [self.dictionary objectForKey:@"direction"];
         self.routes = [self.dictionary objectForKey:@"routes"];
+        self.interModal = [self.dictionary objectForKey:@"inter_modal"];
+        self.address = [self.dictionary objectForKey:@"_address"];
+        self.isMetra = [[self.dictionary objectForKey:@"inter_modal"] isEqualToString:@"Metra"];
+        self.arrayIndex = arrayIndex;
     }
 
     return self;
+}
+
+- (NSString *)getProperty:(NSString *)propertyName {
+
+    return [self.dictionary objectForKey:propertyName];
 }
 
 
